@@ -10,7 +10,7 @@ x=1
 
 #this helps create a nice titlepage
 << COMMENT
-curl https://raw.githubusercontent.com/endercreeper1000/scripts/main/FanfictionDownloaderThingies/TitlePage.html > $title.html
+curl https://raw.githubusercontent.com/endercreeper1000/Fanfiction-Download-Script/main/FanfictionDownloaderThingies/TitlePage.html > $title.html
 
 T=$(sed -n '46p' $title.html)
 M=$(sed -n '48p' $title.html)
@@ -42,7 +42,7 @@ while [ $x -le $2 ]
 COMMENT
 
 		#makes it look nice
-		curl https://raw.githubusercontent.com/endercreeper1000/scripts/main/FanfictionDownloaderThingies/ChapterTemplate.html > $x.html
+		curl https://raw.githubusercontent.com/endercreeper1000/Fanfiction-Download-Script/main/FanfictionDownloaderThingies/ChapterTemplate.html > $x.html
 		NC=$(( $x + 1 ))
 		PC=$(( $x - 1 ))
 		echo $NC.html | sed -i '94r /dev/stdin' $x.html
